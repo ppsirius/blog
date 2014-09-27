@@ -1,13 +1,13 @@
 <h1>Listing articles</h1>
-!
-<% @articles.each do |article| %>
-<div>
-<h2><%= article.title %></h2>
-<h3><%= publication_status(article) %></h3>
-<h4><%= article.author %></h4>
-<p><%= article.content %></p>
-</div>
-<hr>
-<% end %>
-!
+
+  <% @articles.each do |article| %>
+    <div>
+      <h2><%= article.title %></h2>
+      <h3><%= article.publication_status %></h3>
+      <h4><%= article.author %></h4>
+      <p><%= article.content %></p>
+    </div>
+  <hr>
+  <% end %>
+
 <%= link_to 'New Article', new_article_path %>
